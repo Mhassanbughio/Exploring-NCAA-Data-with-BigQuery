@@ -1,3 +1,10 @@
 Which 5 basketball venues have the highest seating capacity?
 Click + Compose New Query and add the below query:
 
+#standardSQL
+SELECT
+  venue_name, venue_capacity, venue_city, venue_state
+FROM `bigquery-public-data.ncaa_basketball.mbb_teams_games_sr`
+GROUP BY 1,2,3,4
+ORDER BY venue_capacity DESC
+LIMIT 5;
