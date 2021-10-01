@@ -114,3 +114,8 @@ Answer: Over 4 million individual basketball plays.
 
 Let’s write some SQL to see what types of plays are there for us to explore.
 
+
+# Congratulations!
+
+
+You've learned how to query the NCAA basketball dataset inside of BigQuery. We encourage you to modify the above queries and write your own to further your understanding. Looking for more NCAA query practice? Checkout the GitHub repo here.
