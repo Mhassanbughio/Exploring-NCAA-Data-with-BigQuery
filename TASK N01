@@ -1,0 +1,12 @@
+What types of basketball play events are there?
+Click + Compose New Query.
+
+Copy and paste the below query into the editor:
+
+#standardSQL
+SELECT
+  event_type,
+  COUNT(*) AS event_count
+FROM `bigquery-public-data.ncaa_basketball.mbb_pbp_sr`
+GROUP BY 1
+ORDER BY event_count DESC;
