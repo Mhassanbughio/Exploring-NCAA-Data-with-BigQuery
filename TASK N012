@@ -2,3 +2,24 @@ Fun queries to run
 Which 5 games featured the most three point shots made? How accurate were all the attempts?
 Click + Compose New Query and add in the below query:
 
+#standardSQL
+#most three points made
+SELECT
+  scheduled_date,
+  name,
+  market,
+  alias,
+  three_points_att,
+  three_points_made,
+  three_points_pct,
+  opp_name,
+  opp_market,
+  opp_alias,
+  opp_three_points_att,
+  opp_three_points_made,
+  opp_three_points_pct,
+  (three_points_made + opp_three_points_made) AS total_threes
+FROM `bigquery-public-data.ncaa_basketball.mbb_teams_games_sr`
+WHERE season > 2010
+ORDER BY total_threes DESC
+LIMIT 5;
