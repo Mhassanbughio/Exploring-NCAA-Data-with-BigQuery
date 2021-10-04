@@ -3,7 +3,7 @@ Click + Compose New Query.
 
 Copy and paste the below query into the editor:
 
-#standardSQL
+###standardSQL
 SELECT
   event_type,
   COUNT(*) AS event_count
